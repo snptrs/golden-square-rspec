@@ -1,13 +1,13 @@
 require 'counter'
 
 RSpec.describe Counter do
-  it "Initialises a counter object then reports the current total" do
+  it "returns a given number" do
     counter = Counter.new()
     counter.add(4)
     expect(counter.report).to eq "Counted to 4 so far."
   end
 
-  it "Initialises a counter object, increments it a couple of times, then reports the current total" do
+  it "returns the total when given multiple positive numbers" do
     counter = Counter.new()
     counter.add(4)
     expect(counter.report).to eq "Counted to 4 so far."
@@ -19,7 +19,7 @@ RSpec.describe Counter do
     expect(counter.report).to eq "Counted to 20 so far."
   end
 
-  it "Initialises a counter object, increments it a couple of times with poistive and negative numbers, then reports the current total" do
+  it "returns the total when given multiple positive or negative numbers" do
     counter = Counter.new()
     counter.add(4)
     expect(counter.report).to eq "Counted to 4 so far."

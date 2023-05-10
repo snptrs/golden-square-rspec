@@ -1,18 +1,18 @@
 require "gratitudes"
 
 RSpec.describe Gratitudes do
-  it "Initially returns 'Be grateful for:'" do
+  it "returns default string when not given an input" do
     gratitudes = Gratitudes.new
     expect(gratitudes.format).to eq "Be grateful for: "
   end
 
-  it "Given one gratitude, returns a string including the gratitude" do
+  it "returns one gratitude" do
     gratitudes = Gratitudes.new
     gratitudes.add("sunshine")
     expect(gratitudes.format).to eq "Be grateful for: sunshine"
   end
 
-  context "Given multiple gratitudes" do
+  context "returns a string with two gratitudes" do
     it "Returns 'Be grateful for: ' and two gratitudes" do
       gratitudes = Gratitudes.new
       gratitudes.add("sunshine")
@@ -20,7 +20,7 @@ RSpec.describe Gratitudes do
       expect(gratitudes.format).to eq "Be grateful for: sunshine, coffee"
     end
 
-    it "Returns 'Be grateful for: ' and three gratitudes" do
+    it "returns a string with three gratitudes" do
       gratitudes = Gratitudes.new
       gratitudes.add("sunshine")
       gratitudes.add("coffee")

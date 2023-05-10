@@ -1,13 +1,13 @@
 require 'string_builder'
 
 RSpec.describe StringBuilder do
-  it "Initialises a string object, adds a word, then outputs the word and the string length" do
+  it "returns a string and has the correct string length" do
     string = StringBuilder.new()
     string.add("Hello")
     expect(string.size).to eq 5
     expect(string.output).to eq "Hello"
   end
-  it "Initialises a string object, adds multiple words, then outputs the phrase and the string length" do
+  it "returns a concatenated string and has the correct string length" do
     string = StringBuilder.new()
     string.add("Hello")
     string.add(", world!")

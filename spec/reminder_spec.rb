@@ -1,6 +1,5 @@
 require 'reminder'
 
-# We use the class name here rather than a string
 RSpec.describe Reminder do
   it "reminds the user to do a task" do
     reminder = Reminder.new("Kay")
@@ -9,5 +8,4 @@ RSpec.describe Reminder do
     expect(result).to eq "Walk the dog, Kay!"
   end
 
-  # We would typically have a number of these examples.
 end

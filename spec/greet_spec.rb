@@ -1,7 +1,7 @@
 require 'greet'
 
 RSpec.describe "Greet method" do
-  it "Returns 'Hello, Sean!'" do
+  it "returns a greeting" do
     result = greet("Sean")
     expect(result).to eq "Hello, Sean!"
   end
